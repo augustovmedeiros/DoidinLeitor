@@ -1,0 +1,131 @@
+/* Estilos para o formulário CRUD */
+.crud-form {
+    background-color: #333;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 35px;
+}
+
+.crud-form h2 {
+    margin-top: 0;
+}
+
+.crud-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.crud-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.crud-form button {
+    padding: 8px 15px;
+    background-color: #111;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Estilos para a lista de mangá no CRUD */
+.manga-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.manga-item {
+    background-color: #333;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+}
+
+.manga-item img {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.manga-item h3 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.manga-item button {
+    padding: 5px 10px;
+    background-color: #111;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+/* ... Estilos anteriores ... */
+
+/* Estilos para os botões de navegação */
+.page-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.page-navigation button {
+    padding: 8px 15px;
+    background-color: #111;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.page-navigation button:hover {
+    background-color: #444;
+}
+
+.page-navigation button:disabled {
+    background-color: #666;
+    cursor: not-allowed;
+}
+
+.pagina-img {
+    max-width: 600px;
+    max-height: 800px;
+    width: auto;
+    height: auto;
+	cursor: pointer;
+}
+
+ .paginaChoose {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+.paginaChoose select {
+            padding: 8px;
+            border: 1px solid #444;
+            border-radius: 5px;
+            background-color: #1a1a1a;
+            color: #fff;
+            cursor: pointer;
+        }
+main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
