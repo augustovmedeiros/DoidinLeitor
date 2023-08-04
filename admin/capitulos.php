@@ -3,7 +3,6 @@
 <?php
     require("../controller/capitulos.php");
     require("../template/header.html");
-    $url = getConfig('url');
 ?>
 <body>
     <main>
@@ -36,7 +35,7 @@
                     echo '<tr>';
                     echo '<td>'. $capitulos[$i]['numero'] .'</td>';
                     echo '<td>'. $capitulos[$i]['titulo'] .'</td>';
-                    echo '<td><a href="'. $url . '/controller/removecap.php?id='. $capitulos[$i]['id'] .'">Deletar</a></td>';
+                    echo '<td><a href="../controller/removecap.php?id='. $capitulos[$i]['id'] .'">Deletar</a></td>';
                     echo '</tr>';
                 }
                 ?>

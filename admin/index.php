@@ -4,7 +4,6 @@
     require("../controller/dbcontroller.php");
     require("../template/header.html");
     $mangas = getMangas(5);
-    $url = getConfig('url');
 ?>
 <body>
     <main>
@@ -30,8 +29,8 @@
                 echo '<div class="manga-item">';
                 echo '<img src="'. $mangas[$i]["capa"] .'">';
                 echo '<h3>'. $mangas[$i]["nome"] .'</h3>';
-                echo '<button class="edit-button"><a href="'. $url .'/admin/capitulos.php?id='. $mangas[$i]["id"] .'">Editar</a></button>';
-                echo '<button class="delete-button"><a href="'. $url .'/controller/removemanga.php?id='. $mangas[$i]["id"] .'">Excluir</a></button>';
+                echo '<button class="edit-button"><a href="../admin/capitulos.php?id='. $mangas[$i]["id"] .'">Editar</a></button>';
+                echo '<button class="delete-button"><a href="../controller/removemanga.php?id='. $mangas[$i]["id"] .'">Excluir</a></button>';
                 echo '</div>';
             }
             ?>

@@ -3,7 +3,6 @@
 <?php
     require("controller/capitulos.php");
     require("template/header.html");
-    $url = getConfig('url');
 ?>
 <body>
     <main>
@@ -29,7 +28,7 @@
                     echo '<tr>';
                     echo '<td>'. $capitulos[$i]['numero'] .'</td>';
                     echo '<td>'. $capitulos[$i]['titulo'] .'</td>';
-                    echo '<td><a href="'. $url .'/leitor.php?id='. $capitulos[$i]['id'] .'">Ler</a></td>';
+                    echo '<td><a href="../leitor.php?id='. $capitulos[$i]['id'] .'">Ler</a></td>';
                     echo '</tr>';
                 }
                 ?>

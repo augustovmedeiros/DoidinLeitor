@@ -3,7 +3,6 @@
 <?php
     require("controller/capitulo.php");
     require("template/header.html");
-    $url = getConfig('url');
 ?>
 <body>
     <main>
@@ -13,7 +12,7 @@
                 </select>
             </div>
             <div class="current-page">
-                <img onclick="avancarPag()" class="pagina-img" src="/imgs/mangas/1/1/1.jpg">
+                <img onclick="avancarPag()" class="pagina-img" src="">
             </div>
             <div class="page-navigation">
                 <button onclick="voltarPag()" id="prev-page">Anterior</button>
@@ -25,13 +24,32 @@
     var actualPage = 1;
     <?php
     echo 'var totalPages = '. $capData['paginas'] .';';
-    echo 'var capUrl = "' . $url . '/imgs/mangas/'. $capData['manga_id'] . '/'. $capData['id'] . '/";';
+    echo 'var capUrl = "../imgs/mangas/'. $capData['manga_id'] . '/'. $capData['id'] . '/";';
     ?>
     document.getElementById('page-select').innerHTML += "<?php
     for($i=1; $i<=$capData['paginas']; $i++){
         echo '<option value='. $i .'>Página '. $i .'</option>';
-    }      
-    ?>";
+    }?>";
+
+    var images = [];
+    function preload() {
+        for (var i = 0; i < arguments.length; i++) {
+            images[i] = new Image();
+            images[i].src = preload.arguments[i];
+        }
+    }
+
+    preload(<?php 
+    for($i=1; $i<=$capData['paginas']; $i++){
+        echo '"../imgs/mangas/'. $capData['manga_id'] . '/'. $capData['id'] . '/' . $i .'.jpg",';
+    }
+    
+    ?>);
+
+    pageUrl = capUrl + actualPage + ".jpg";
+    document.getElementsByClassName('pagina-img')[0].src = pageUrl;
+    document.getElementById('page-select').value = actualPage;
+
     function voltarPag(){
         if(actualPage > 1){
             actualPage--;
